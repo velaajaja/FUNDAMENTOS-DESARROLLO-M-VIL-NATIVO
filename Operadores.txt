@@ -1,0 +1,77 @@
+
+// Función para calcular el área de un triángulo
+fun areaTriangulo(base: Double, altura: Double): Double {
+    return (base * altura) / 2
+}
+
+fun main() {
+    // Ejemplo de valores para la base y altura del triángulo
+    val base = 10.0
+    val altura = 5.0
+
+    val area = areaTriangulo(base, altura)
+    println("El área del triángulo es: $area")
+}
+
+// Función para sumar dos números ingresados por teclado
+fun sumaNumeros(): Double {
+    println("Ingrese el primer número:")
+    val num1 = readLine()!!.toDouble()
+    println("Ingrese el segundo número:")
+    val num2 = readLine()!!.toDouble()
+    return num1 + num2
+}
+
+fun main() {
+    val resultadoSuma = sumaNumeros()
+    println("La suma de los dos números es: $resultadoSuma")
+}
+
+// Función para calcular el número elevado al cuadrado
+fun numeroAlCuadrado(numero: Double): Double {
+    return numero * numero
+}
+
+// Función para convertir euros a dólares
+fun eurosADolares(euros: Double): Double {
+    val tasaCambio = 1.17 // Tasa de cambio de euros a dólares
+    return euros * tasaCambio
+}
+// Función para calcular el área y el perímetro de un cuadrado
+fun calcularAreaPerimetroCuadrado(lado: Double): Pair<Double, Double> {
+    val area = lado * lado
+    val perimetro = 4 * lado
+    return Pair(area, perimetro)
+}
+
+// Función para calcular el área de un cilindro
+fun calcularAreaCilindro(radio: Double, altura: Double): Double {
+    val areaBase = Math.PI * radio * radio
+    val areaLateral = 2 * Math.PI * radio * altura
+    return areaBase + areaLateral
+}
+
+// Función para calcular el volumen de un cilindro
+fun calcularVolumenCilindro(radio: Double, altura: Double): Double {
+    return Math.PI * radio * radio * altura
+}
+// Función para calcular la longitud de una circunferencia
+fun calcularLongitudCircunferencia(radio: Double): Double {
+    return 2 * Math.PI * radio
+}
+
+// Función para calcular el área del círculo inscrito
+fun calcularAreaCirculoInscrito(radio: Double): Double {
+    return Math.PI * radio * radio
+}
+// Función para calcular el promedio de tres números ingresados por teclado
+fun calcularPromedio(): Double {
+    println("Ingrese el primer número:")
+    val num1 = readLine()!!.toDouble()
+    println("Ingrese el segundo número:")
+    val num2 = readLine()!!.toDouble()
+    println("Ingrese el tercer número:")
+    val num3 = readLine()!!.toDouble()
+    
+    return (num1 + num2 + num3) / 3
+}

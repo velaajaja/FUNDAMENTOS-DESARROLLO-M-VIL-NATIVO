@@ -1,0 +1,129 @@
+1.)//Escribir un algoritmo para saber si el número ingresado por teclado es positivo o negativo.
+fun verificarPositivoNegativo(numero: Int) {
+    if (numero > 0) {
+        println("El número es positivo.")
+    } else if (numero < 0) {
+        println("El número es negativo.")
+    } else {
+        println("El número es cero.")
+    }
+}
+
+fun main() {
+    println("Ingrese un número:")
+    val numero = readLine()!!.toInt()
+    verificarPositivoNegativo(numero)
+}
+2.)//Escribir un algoritmo que reciba dos números por teclado y diga cuál es el mayor y cuál es el menor.
+
+fun encontrarMayorMenor(num1: Int, num2: Int) {
+    if (num1 > num2) {
+        println("El mayor es: $num1")
+        println("El menor es: $num2")
+    } else if (num1 < num2) {
+        println("El mayor es: $num2")
+        println("El menor es: $num1")
+    } else {
+        println("Ambos números son iguales.")
+    }
+}
+
+fun main() {
+    println("Ingrese el primer número:")
+    val num1 = readLine()!!.toInt()
+    println("Ingrese el segundo número:")
+    val num2 = readLine()!!.toInt()
+    encontrarMayorMenor(num1, num2)
+}
+
+3.)//Escriba un programa que lea tres números enteros positivos y que calcule e imprima en pantalla el menor y el mayor de ellos.
+fun encontrarMayorMenor(num1: Int, num2: Int, num3: Int) {
+    val mayor = maxOf(num1, num2, num3)
+    val menor = minOf(num1, num2, num3)
+    println("El mayor es: $mayor")
+    println("El menor es: $menor")
+}
+
+fun main() {
+    println("Ingrese el primer número:")
+    val num1 = readLine()!!.toInt()
+    println("Ingrese el segundo número:")
+    val num2 = readLine()!!.toInt()
+    println("Ingrese el tercer número:")
+    val num3 = readLine()!!.toInt()
+    encontrarMayorMenor(num1, num2, num3)
+}
+4.)//Dados dos números A y B, sumarlos si A es menor que B o sino restarlos.
+
+fun sumarOrestar(numA: Int, numB: Int) {
+    val resultado = if (numA < numB) {
+        numA + numB
+    } else {
+        numA - numB
+    }
+    println("El resultado es: $resultado")
+}
+
+fun main() {
+    println("Ingrese el número A:")
+    val numA = readLine()!!.toInt()
+    println("Ingrese el número B:")
+    val numB = readLine()!!.toInt()
+    sumarOrestar(numA, numB)
+}
+
+5.)//Dados dos números A y B, encontrar el cociente entre A y B.
+
+fun encontrarCociente(numA: Int, numB: Int) {
+    if (numB != 0) {
+        val cociente = numA.toDouble() / numB.toDouble()
+        println("El cociente es: $cociente")
+    } else {
+        println("La división no es posible. El divisor (B) no puede ser cero.")
+    }
+}
+
+fun main() {
+    println("Ingrese el número A:")
+    val numA = readLine()!!.toInt()
+    println("Ingrese el número B:")
+    val numB = readLine()!!.toInt()
+    encontrarCociente(numA, numB)
+}
+
+6.)
+//Dados dos números A y B, sumarlos si al menos uno de ellos es negativo, en caso contrario multiplicarlos.
+fun sumarOmultiplicar(numA: Int, numB: Int) {
+    val resultado = if (numA < 0 || numB < 0) {
+        numA + numB
+    } else {
+        numA * numB
+    }
+    println("El resultado es: $resultado")
+}
+
+fun main() {
+    println("Ingrese el número A:")
+    val numA = readLine()!!.toInt()
+    println("Ingrese el número B:")
+    val numB = readLine()!!.toInt()
+    sumarOmultiplicar(numA, numB)
+}
+
+7.)
+//Escribir un algoritmo que determine si un año es bisiesto o no.
+fun esBisiesto(anio: Int): Boolean {
+    return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)
+}
+
+fun main() {
+    println("Ingrese el año:")
+    val anio = readLine()!!.toInt()
+
+    if (esBisiesto(anio)) {
+        println("El año $anio es bisiesto.")
+    } else {
+        println("El año $anio no es bisiesto.")
+    }
+}
+
